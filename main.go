@@ -28,8 +28,5 @@ func main() {
 	b.Handle(tele.OnPhoto, func(c tele.Context) error {
 		return c.Send(c.Message().Photo)
 	})
-	b.Handle(tele.OnChannelPost, func(c tele.Context) error {
-		return c.Send(c.Message())
-	})
 	b.Start()
 }
